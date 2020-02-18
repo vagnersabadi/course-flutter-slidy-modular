@@ -1,16 +1,34 @@
-# course_flutter_slidy_modular
+### Course Flutter Slidy Modular by [Flutterando](https://www.youtube.com/playlist?list=PLlBnICoI-g-dCE_JiJd7bJnEYbigkX7pq)
 
-A new Flutter project.
 
-## Getting Started
+<p align="center">
+  <img width="150" height="300" src="img/poke-api.png">
+</p>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+#### commands
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> Generate .g.dart
+```sh
+$ flutter pub run build_runner watch
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> Delete .g.dart all
+```sh
+$ flutter pub run build_runner watch --delete-conflicting-outputs
+```
+
+
+#### dependencies
+```yaml
+flutter_modular:
+mobx:
+flutter_mobx:
+dio:
+```
+
+#### dev_dependencies
+```yaml
+build_runner:
+mobx_codegen:
+```
