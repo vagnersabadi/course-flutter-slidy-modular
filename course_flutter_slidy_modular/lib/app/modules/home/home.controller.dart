@@ -1,4 +1,4 @@
-import 'package:course_flutter_slidy_modular/app/pages/shared/repositories/poke.repository.dart';
+import 'package:course_flutter_slidy_modular/app/modules/home/repositories/poke.repository.dart';
 import 'package:mobx/mobx.dart';
 part 'home.controller.g.dart';
 

@@ -1,4 +1,4 @@
-import 'package:course_flutter_slidy_modular/app/pages/shared/models/poke.model.dart';
+import 'package:course_flutter_slidy_modular/app/modules/home/models/poke.model.dart';
 import 'package:dio/dio.dart';
 
 class PokeRepository {

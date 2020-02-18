@@ -1,4 +1,4 @@
-import 'package:course_flutter_slidy_modular/app/pages/home/home.controller.dart';
+import 'package:course_flutter_slidy_modular/app/modules/home/home.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
