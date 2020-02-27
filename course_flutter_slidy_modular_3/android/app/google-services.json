@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "557138987260",
+    "firebase_url": "https://slidy-417c5.firebaseio.com",
+    "project_id": "slidy-417c5",
+    "storage_bucket": "slidy-417c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557138987260:android:d52a6d165fab2e61bd6f79",
+        "android_client_info": {
+          "package_name": "br.course_flutter_slidy_modular_3.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557138987260-m371rlvv4hhl5rmc490jvl4a1h8b3gu8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.course_flutter_slidy_modular_3.login",
+            "certificate_hash": "a87f132e03ca38eb5698bc9a037a79374aef5f15"
+          }
+        },
+        {
+          "client_id": "557138987260-0c9lqp4laa3tl5s7lvav7ad01anchnjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVHXway3OsZAIa3u_-jMgAKOPCd5UN9Mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557138987260-0c9lqp4laa3tl5s7lvav7ad01anchnjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

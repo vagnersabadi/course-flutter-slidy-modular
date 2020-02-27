@@ -1,6 +1,11 @@
 import 'package:course_flutter_slidy_modular_3/app/shared/auth/repositories/auth_repository_interface.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthRepository implements IAuthRepository {
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   @override
   Future getEmailPasswordLogin() {
     // TODO: implement getEmailPasswordLogin
@@ -14,9 +19,19 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future getGoogleLogin() {
-    // TODO: implement getGoogleLogin
-    return null;
+  Future<FirebaseUser> getGoogleLogin() async {
+    final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
+
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    final FirebaseUser user =
+        (await _auth.signInWithCredential(credential)).user;
+    return user;
   }
 
   @override
@@ -30,5 +45,4 @@ class AuthRepository implements IAuthRepository {
     // TODO: implement getUser
     return null;
   }
-  
 }
