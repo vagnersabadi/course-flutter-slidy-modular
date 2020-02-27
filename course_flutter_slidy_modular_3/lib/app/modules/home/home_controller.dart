@@ -1,7 +1,7 @@
+import 'package:course_flutter_slidy_modular_3/app/shared/auth/auth_controller.dart';
+import 'package:course_flutter_slidy_modular_3/app/shared/repositories/localstorage/local_storage_interface.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:login/app/shared/auth/auth_controller.dart';
-import 'package:login/app/shared/repositories/localstorage/local_storage_interface.dart';
 import 'package:mobx/mobx.dart';
 
 part 'home_controller.g.dart';

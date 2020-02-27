@@ -1,7 +1,7 @@
-import 'package:login/app/modules/login/login_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'login_controller.dart';
+import 'login_page.dart';
 
 class LoginModule extends ChildModule {
   @override
