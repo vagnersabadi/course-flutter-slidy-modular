@@ -1,4 +1,4 @@
-package com.example.course_flutter_slidy_modular_3
+package br.course_flutter_slidy_modular_3.login
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
