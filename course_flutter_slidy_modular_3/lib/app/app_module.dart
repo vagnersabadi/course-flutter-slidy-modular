@@ -1,6 +1,7 @@
 import 'package:course_flutter_slidy_modular_3/app/app_controller.dart';
 import 'package:course_flutter_slidy_modular_3/app/shared/auth/auth_controller.dart';
 import 'package:course_flutter_slidy_modular_3/app/shared/auth/repositories/auth_repository_interface.dart';
+import 'package:course_flutter_slidy_modular_3/app/splash/splash_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:course_flutter_slidy_modular_3/app/app_widget.dart';
@@ -26,7 +27,8 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router('/', module: LoginModule()),
+        // Router('/', child: (_,arg)=> SplashPage()),
+        Router('/', module: LoginModule(), transition: TransitionType.noTransition),
         Router('/home', module: HomeModule()),
 
       ];

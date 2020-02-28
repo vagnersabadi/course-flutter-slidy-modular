@@ -10,22 +10,35 @@ abstract class _AuthControllerBase with Store {
   final IAuthRepository _authRepository = Modular.get();
 
   @observable
+  AuthStatus status = AuthStatus.loading;
+
+  @observable
   FirebaseUser user;
 
-  setUser(FirebaseUser value) => user = value;
+  @action
+  setUser(FirebaseUser value) {
+    user = value;
+    if (user == null) {
+      status = AuthStatus.logoff;
+    } else {
+      status = AuthStatus.login;
+    }
+  }
 
-// primeira coisa
   _AuthControllerBase() {
-    _authRepository.getUser().then(setUser);
+    _authRepository.getUser().then(setUser).catchError((e) {
+      print('ERRORRRRRR');
+    });
   }
 
   @action
-  Future loginWinthGoogle() async {
+  Future loginWithGoogle() async {
     user = await _authRepository.getGoogleLogin();
   }
 
-   @action
-  Future logout() async {
+  Future logout() {
     return _authRepository.getLogout();
-    }
+  }
 }
+
+enum AuthStatus { loading, login, logoff }
