@@ -41,8 +41,13 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future getUser() {
-    // TODO: implement getUser
-    return null;
+  Future<FirebaseUser> getUser() {
+    return _auth.currentUser();
+  }
+
+  @override
+  Future getLogout() {
+    // TODO: implement getLogout
+    return  _auth.signOut();
   }
 }
